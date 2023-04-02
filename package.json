@@ -1,0 +1,18 @@
+{
+  "name": "fashion-store-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/TanjilaShamima/fashion-store-api.git",
+  "author": "Tanjila Shamima <tanjila.cse.diu@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prod": "node index.js",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
