@@ -1,4 +1,4 @@
-const { updateUser, deleteUser, getUserDetails, getAllUserDetails } = require("../controller/userController");
+const { updateUser, deleteUser, getUserDetails, getAllUserDetails, getUserStarts } = require("../controller/userController");
 const { verifyTokenAndAuthorization, verifyTokenAndAdmin } = require("./verifyToken");
 
 const router = require("express").Router();
@@ -18,5 +18,13 @@ router.get("/find/:id", verifyTokenAndAdmin, getUserDetails);
 /**=========Get All User route============= */
 
 router.get("/users", verifyTokenAndAdmin, getAllUserDetails);
+
+/**=========Get User starts============= */
+
+router.get("/starts", verifyTokenAndAdmin, getUserStarts);
+
+
+
+
 
 module.exports = router;
