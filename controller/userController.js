@@ -1,6 +1,5 @@
 const User = require("../models/UserModel");
 const CryptoJS = require("crypto-js");
-const { response } = require("express");
 
 /**================================Update User Controller============================ */
 
