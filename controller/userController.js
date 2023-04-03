@@ -26,6 +26,9 @@ exports.updateUser = async (req, res) => {
   }
 };
 
+
+/**================================Delete User Controller============================ */
+
 exports.deleteUser = async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
@@ -34,6 +37,8 @@ exports.deleteUser = async (req, res) => {
     res.status(404).json(err);
   }
 };
+
+/**================================get User Controller============================ */
 
 exports.getUserDetails = async (req, res) => {
   try {
@@ -44,6 +49,9 @@ exports.getUserDetails = async (req, res) => {
     res.status(404).json(err);
   }
 };
+
+
+/**================================get Users Controller============================ */
 
 exports.getAllUserDetails = async (req, res) => {
   try {
