@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const productRoute = require("./routes/productRoute");
+const cartRoute = require("./routes/cartRoute");
+const orderRoute = require("./routes/orderRoute");
 dotenv.config();
 
 const app = express();
@@ -29,6 +31,11 @@ app.use(express.json());
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
+app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
+
+
+/**=============app listen function======================= */
 
 app.listen(PORT, () => {
   console.log("listening on port", PORT);

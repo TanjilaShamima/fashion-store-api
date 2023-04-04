@@ -21,12 +21,12 @@ router.put("/update/:id", verifyTokenAndAdmin, updateProduct);
 
 router.put("/delete/:id", verifyTokenAndAdmin, deleteProduct);
 
-/**=========Delete Product route============= */
+/**=========Find Product route============= */
 
-router.put("/find/:id", findProductById);
+router.get("/find/:id", findProductById);
 
-/**=========Delete Product route============= */
+/**=========Find Products route============= */
 
-router.put("/find", findAllProducts);
+router.get("/find", findAllProducts);
 
 module.exports = router;
