@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const productRoute = require("./routes/productRoute");
@@ -22,6 +23,7 @@ mongoose
     console.log("Error connecting", err);
   });
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
