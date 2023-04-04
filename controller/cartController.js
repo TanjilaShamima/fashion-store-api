@@ -16,7 +16,7 @@ exports.addNewCart = async (req, res) => {
 
 exports.updateCart = async (req, res) => {
   try {
-    const updateCart = await cart.findByIdAndUpdate(
+    const updateCart = await Cart.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
